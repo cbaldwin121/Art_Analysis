@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
 
+<div [formGroup]='signinForm'>
+  <h2> Sign in to your account</h2>
+  <ion-label>Email</ion-label>
+    <ion-input type="text" formControlName="email"></ion-input>
+  <ion-label>Password</ion-label>
+    <ion-input type="text" formControlName="password"></ion-input>
+
+</div>
+
+<ion-button (click)="signIn()">Sign In</ion-button>
 </ion-content>
+

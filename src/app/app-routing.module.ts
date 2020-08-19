@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { AuthGuard } from './services/auth/auth.guard'
+
 
 const routes: Routes = [
   {
     path: 'home',
+    canLoad: [AuthGuard],
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
