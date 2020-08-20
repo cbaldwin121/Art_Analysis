@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { environment } from 'src/environments/environment';
 import { CognitoUser } from '@aws-amplify/auth';
 import { Router } from '@angular/router'
-
+// import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -26,9 +26,12 @@ export class LoginPage {
   constructor(
     public auth: AuthService,
     private _router: Router, 
+    // private _snackBar: MatSnackBar
     // private _loader: LoaderService 
   ) { }
-  
+  openSnackBar(message: string){
+    // this._snackBar.open(message);
+  }
   getEmailInputError() {
     if (this.emailInput.hasError('email')){
       return 'Please enter a valid email address.';
@@ -51,7 +54,9 @@ export class LoginPage {
     })
     .catch((error: any) => {
       // this._loader.hide();
-      console.log(error.message); // Add notification functionality here 
+
+      // console.log(error.message); // Add notification functionality here 
+      // this.openSnackBar(error);
       switch (error.code) {
         case "UserNotConfirmedException":
           environment.confirm.email = this.emailInput.value;

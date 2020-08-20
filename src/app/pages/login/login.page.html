@@ -8,9 +8,10 @@
 <div [formGroup]='signinForm'>
   <h2> Sign in to your account</h2>
   <ion-label>Email</ion-label>
-    <ion-input type="text" formControlName="email"></ion-input>
+    <ion-input type="email" formControlName="email" required></ion-input>
   <ion-label>Password</ion-label>
-    <ion-input type="text" formControlName="password"></ion-input>
+    <ion-input type="password" formControlName="password" required></ion-input>
+  <ion-label *ngIf="!passwordInput.valid"> {{getPasswordInputError()}}</ion-label>
 
 </div>
 
