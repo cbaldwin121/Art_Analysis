@@ -29,9 +29,9 @@ export class LoginPage {
     // private _snackBar: MatSnackBar
     // private _loader: LoaderService 
   ) { }
-  openSnackBar(message: string){
-    // this._snackBar.open(message);
-  }
+  // openSnackBar(message: string){
+  //   this._snackBar.open(message);
+  // }
   getEmailInputError() {
     if (this.emailInput.hasError('email')){
       return 'Please enter a valid email address.';
