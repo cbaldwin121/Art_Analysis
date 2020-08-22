@@ -3,7 +3,7 @@
     <button ion-button icon-only menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Home Page </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="openModal()">
           <ion-icon name="settings"></ion-icon>
@@ -12,9 +12,33 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content >
-  <ion-list>
-    <ion-item text-wrap>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam eius magni et repudiandae optio aliquid tempore repellendus veniam unde, aperiam consequatur, illum eum quaerat ut sint incidunt voluptas molestias. Libero.</ion-item>
-  </ion-list>
+  <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Care Plan</ion-card-subtitle>
+          <ion-card-title>Pitbull</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          These are some temporary words - or are they?
+        </ion-card-content>
+      </ion-card>
+
+  <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="speakers">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Collaborate</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
 </ion-content>
