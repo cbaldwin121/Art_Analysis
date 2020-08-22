@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'confirm-email',
     loadChildren: () => import('./pages/confirm-email/confirm-email.module').then( m => m.ConfirmEmailPageModule)
   },
+  {
+    path: 'collab',
+    loadChildren: () => import('./pages/collab/collab.module').then( m => m.CollabPageModule)
+  },
+  {
+    path: 'add-care-giver',
+    loadChildren: () => import('./pages/add-care-giver/add-care-giver.module').then( m => m.AddCareGiverPageModule)
+  },
 ];
 
 @NgModule({
