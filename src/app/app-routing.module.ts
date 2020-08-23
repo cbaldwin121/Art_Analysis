@@ -7,7 +7,7 @@ import { AuthGuard } from './services/auth/auth.guard'
 const routes: Routes = [
   {
     path: 'home',
-    canLoad: [AuthGuard],
+    // canLoad: [AuthGuard],
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'add-care-giver',
     loadChildren: () => import('./pages/add-care-giver/add-care-giver.module').then( m => m.AddCareGiverPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
 ];
 

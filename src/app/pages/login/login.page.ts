@@ -47,7 +47,7 @@ export class LoginPage {
   }
   signIn(){
     // this._loader.show();
-    this.auth.signIn(this.emailInput.value, this.passwordInput.value, '')
+    this.auth.signIn(this.emailInput.value, this.passwordInput.value)
     .then((user: CognitoUser|any) => {
       // this._loader.hide();
       this._router.navigate(['home']);
