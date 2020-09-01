@@ -1,50 +1,21 @@
 <ion-header>
-  <ion-navbar color="secondary">
-    <button ion-button icon-only menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-    <ion-title>Home Page </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="openModal()">
-          <ion-icon name="settings"></ion-icon>
-        </button>
-    </ion-buttons>
-  </ion-navbar>
+  <app-header></app-header>
 </ion-header>
 <ion-content >
-  <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Care Plan</ion-card-subtitle>
-          <ion-card-title>Pitbull</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          These are some temporary words - or are they?
-        </ion-card-content>
-      </ion-card>
-  <ion-card>
-  <ion-item>
-    <ion-label position="floating">Post About Your Child</ion-label>
-    <ion-input></ion-input>
-    <ion-button color='primary' expand='block'>Submit</ion-button>
-  </ion-item>
-  
-  </ion-card>
-  <ion-tabs>
+
+<ion-card>
+  <app-newpost (accountAdded)="onPostAdded($event)"></app-newpost>
+  <hr>
+  <app-post
+        *ngFor="let post of posts; let i = index"
+        [post]="post"
+        [id]="i"
+        (statusChanged)="onStatusChanged($event)"></app-post>
+</ion-card>
+
+<ion-tabs>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="speakers">
-      <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Collaborate</ion-label>
-    </ion-tab-button>
-
-    <ion-tab-button tab="map">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Home</ion-label>
-    </ion-tab-button>
-
-    <ion-tab-button tab="about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+    <app-footer></app-footer>
+ </ion-tab-bar>
 </ion-tabs>
 </ion-content>
