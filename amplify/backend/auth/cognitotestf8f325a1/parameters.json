@@ -1,6 +1,4 @@
 {
-    "identityPoolName": "cognitotestf8f325a1_identitypool_f8f325a1",
-    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "cognitf8f325a1",
     "userPoolName": "cognitotestf8f325a1_userpool_f8f325a1",
     "autoVerifiedAttributes": [
@@ -32,7 +30,7 @@
     "userpoolClientSetAttributes": false,
     "sharedId": "f8f325a1",
     "resourceName": "cognitotestf8f325a1",
-    "authSelections": "identityPoolAndUserPool",
+    "authSelections": "userPoolOnly",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -45,7 +43,7 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "manual",
     "usernameAttributes": [
         "email"
     ],
@@ -55,5 +53,8 @@
         "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "dependsOn": []
+    "dependsOn": [],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "hostedUI": false
 }

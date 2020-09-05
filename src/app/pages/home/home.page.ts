@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { TestDbService } from 'src/app/services/test-db.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +10,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  result$: Observable<any>;
+
+  constructor(
+    private _testdbservice: TestDbService
+  ) {
+    this.result$ = _testdbservice.resolveItems();
+  }
 
 }

@@ -1,9 +1,9 @@
 {
-	"auth": {
-		"cognitotestf8f325a1": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	}
+    "auth": {
+        "cognitotestf8f325a1": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": []
+        }
+    }
 }
