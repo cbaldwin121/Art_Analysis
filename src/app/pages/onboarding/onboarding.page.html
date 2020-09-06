@@ -1,11 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>onboarding</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-button [routerLink]="['/register']" shape="round">Register</ion-button>
-  <ion-button [routerLink]="['/login']" shape="round">Login</ion-button>
+		<ion-slides pager="true" [options]="slideConfig" (ionSlideReachEnd)="changeText()">
+			<ion-slide *ngFor="let item of products">
+				<ion-card class="item-card shadow-sm">
+					<div class="card-img">
+						<div class="circle-img">
+							<img src="{{ item.image }}" />
+						</div>
+					</div>
 
+					<ion-card-header>
+						<ion-card-title>{{ item.title }}</ion-card-title>
+						<ion-card-subtitle
+							>{{ item.description }}</ion-card-subtitle
+						>
+					</ion-card-header>
+				</ion-card>
+			</ion-slide>
+		</ion-slides>
+
+		<ion-footer class="ion-no-border">
+			<ion-button size="small" fill="default" shape="round" style="float: left" (click)="skipToHome()">
+				Skip
+			</ion-button>
+			<ion-button size="small" fill="default" shape="round" style="float: right" (click)="nextSlide()">
+				{{ btnText }}
+			</ion-button>
+		</ion-footer>
 </ion-content>
