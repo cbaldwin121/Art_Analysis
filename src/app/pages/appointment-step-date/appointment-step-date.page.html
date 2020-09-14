@@ -1,0 +1,82 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar [appHidePartHeader]="scrollArea">
+	<ion-title>Book Appointment</ion-title>
+	<ion-buttons slot="end">
+		<ion-button
+			class="circle-button ion-no-padding"
+			fill="clear"
+			shape="round"
+			color="default"
+			(click)="goBack()"
+		>
+			<i class="icon-x"></i>
+		</ion-button>
+	</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #scrollArea scrollEvents="true">
+  <div class="user-container flex flex-column flex-align-vertical">
+    <ion-avatar>
+      <img
+        src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
+      />
+    </ion-avatar>
+    <ion-label style="margin-bottom: 1rem;">
+      <h2>Joana Medina</h2>
+      <p>Dermatology</p>
+    </ion-label>
+  </div>
+  <div class="content">
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Available days</h4>
+      </ion-text>
+      <div class="flex flex-row">
+        <app-day-button [day]="'MON'" [number]="'17'"></app-day-button> 
+        <app-day-button [day]="'TUE'" [number]="'18'"></app-day-button> 
+        <app-day-button [day]="'WED'" [number]="'19'"></app-day-button> 
+        <app-day-button [day]="'THU'" [number]="'20'"></app-day-button> 
+        <app-day-button [day]="'FRI'" [number]="'21'"></app-day-button> 
+      </div>
+    </div>
+    <div class="separator"></div>
+
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Available hours</h4>
+      </ion-text>
+      <div class="ion-text-center">
+       <app-hour-button [hour]="'09:30 AM'"></app-hour-button>
+       <app-hour-button [hour]="'11:30 AM'"></app-hour-button>
+       <app-hour-button [hour]="'02:30 PM'"></app-hour-button>
+       <app-hour-button [hour]="'03:30 PM'"></app-hour-button>
+       <app-hour-button [hour]="'04:30 PM'"></app-hour-button>
+       <app-hour-button [hour]="'06:30 AM'"></app-hour-button>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Services</h4>
+      </ion-text>
+      <ion-list>
+        <ion-item lines="none" *ngFor="let entry of doctor.services">
+          <ion-label>{{entry.service}}</ion-label>
+		  <ion-checkbox
+		  	mode="ios"
+            slot="start"
+            [(ngModel)]="entry.isChecked"
+          ></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+      <ion-button class="apply-button" expand="block" (click)="onNext()">
+        Next
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-card {
+	box-shadow: none !important;
+	padding: 1rem 0.5rem;    
+}
+
+ion-card-header {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+ion-thumbnail {
+	--border-radius: 6pt;
+	--size: 5rem;
+    margin: auto;
+    opacity: 0.6;
+}
+
+p {
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--ion-color-title);
+    margin-bottom: 0;
+}
+
+span {
+    font-size: 10pt;
+    color:var(--ion-color-subtitle);
+    margin-top: 0;
+}

@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-title>
+			Appointments
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="content">
+		<ion-searchbar animated></ion-searchbar>
+		<ng-container *ngIf="!appointments; else elseTemplate">
+			<ion-list>
+				<app-appointment-item
+					button
+					*ngFor="let item of appointments; let i = index"
+					[name]="item.doctor.name"
+					[photo]="item.doctor.photo"
+					[date]="item.date"
+					[place]="'General Hospital NY'"
+					[status]="item.status"
+				></app-appointment-item>
+			</ion-list>
+		</ng-container>
+		<ng-template #elseTemplate>
+			<div class="center">
+				<app-empty-state [image]="'assets/icon/medical-history-color.svg'" [message]="'Your are clear, enjoy your life'" [subMessage]="'Nothing to worry about, your are healthy person and keep doing it'"></app-empty-state>
+			</div>
+		</ng-template>
+	</div>
+</ion-content>

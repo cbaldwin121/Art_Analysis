@@ -1,0 +1,29 @@
+<ion-item>
+  <ion-avatar>
+    <img src="{{ photo }}" />
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ name }}</h2>
+    <p>{{ speciality }}</p>
+
+    <app-star-rating
+      #rating
+      activeIcon="ios-star"
+      defaultIcon="ios-star-outline"
+      activeColor="#ffce00"
+      defaultColor="#a6b0bf"
+      readonly="true"
+      rating="{{ stars }}"
+      fontSize="12pt"
+    >
+    </app-star-rating>
+  </ion-label>
+  <ion-button
+    class="circle-button ion-no-padding"
+    slot="end"
+    fill="clear"
+    color="default"
+  >
+    <i class="icon-more-vertical"></i>
+  </ion-button>
+</ion-item>

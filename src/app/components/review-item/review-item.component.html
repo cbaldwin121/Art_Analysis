@@ -1,0 +1,18 @@
+<ion-card>
+	<ion-card-header>
+		<ion-item>
+			<ion-avatar>
+				<img src="{{ avatar }}" />
+			</ion-avatar>
+			<ion-label>
+				<h2>{{ name }}</h2>
+				<app-star-rating #rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#ffce00"
+				defaultColor="#a6b0bf" readonly="true" rating="{{ rate }}" fontSize="12pt">
+			</app-star-rating>
+			</ion-label>
+		</ion-item>
+	</ion-card-header>
+	<ion-card-content>
+		{{ text }}
+	</ion-card-content>
+</ion-card>

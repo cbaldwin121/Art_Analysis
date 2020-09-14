@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar [appHidePartHeader]="scrollArea">
+	<ion-title>Appointment Confirmation</ion-title>
+	<ion-buttons slot="end">
+		<ion-button
+			class="circle-button ion-no-padding"
+			fill="clear"
+			shape="round"
+			color="default"
+		>
+			<i class="icon-x"></i>
+		</ion-button>
+	</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #scrollArea scrollEvents="true">
+  <div class="content">
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Specialist</h4>
+      </ion-text>
+      <app-doctor-item
+      [name]="appointment.doctor.name"
+      [photo]="appointment.doctor.photo"
+      [speciality]="appointment.doctor.speciality"
+      [stars]="appointment.doctor.stars"
+      [reviews]="appointment.doctor.reviews"
+      [routerLink]="'/doctor'"
+  ></app-doctor-item>
+    </div>
+    <div class="separator"></div>
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Services</h4>
+      </ion-text>
+     <ion-list>
+       <p *ngFor="let item of appointment.services">
+        {{ item.service }}
+       </p>
+     </ion-list>
+    </div>
+    <div class="separator"></div>
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Date and Time</h4>
+      </ion-text>
+      {{ appointment.date }}
+    </div>
+    <div class="separator"></div>
+    <div class="block-container flex flex-column ion-text-left">
+      <ion-text color="dark">
+        <h4>Location</h4>
+      </ion-text>
+     {{ appointment.location }}
+    </div>
+    <div class="separator"></div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+      <ion-button class="apply-button" expand="block" (click)="confirm()">
+        Confirm
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>

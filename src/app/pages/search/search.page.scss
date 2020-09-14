@@ -1,0 +1,28 @@
+ion-text {
+  h5 {
+    margin: 1rem auto !important;
+    font-weight: 700;
+    font-size: 12pt;
+    color: var(--ion-color-title);
+  }
+}
+
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  color: #fff;
+}
+
+ion-content {
+  --background: var(--ion-color-primary);
+}
+
+ion-button i {
+	color: #ffffff;
+}
+
+.content {
+  border-radius: 14pt 14pt 0 0;
+  background: #ffffff;
+  padding: 1rem;
+  min-height: 100%;
+}

@@ -1,0 +1,44 @@
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  color: #fff;
+}
+
+ion-content {
+  --background: var(--ion-color-primary);
+}
+
+.content {
+  border-radius: 14pt 14pt 0 0;
+  background: #ffffff;
+  padding-top: 1rem;
+  height: 100%;
+}
+
+ion-toolbar i {
+  color: #fff;
+}
+
+ion-footer ion-toolbar {
+  --background: transparent !important;
+}
+
+.apply-button {
+  margin: 0 1rem !important;
+}
+
+.block-container {
+  padding: 0.5rem 1.5rem;
+
+  p {
+    margin-bottom: 0;
+    font-size: 11pt;
+    line-height: 16pt;
+    color: var(--ion-color-text);
+  }
+}
+
+ion-text>h4 {
+  margin-top: 0;
+  font-size: 12pt;
+  font-weight: 700;
+}

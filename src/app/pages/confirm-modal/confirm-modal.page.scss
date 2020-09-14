@@ -1,0 +1,53 @@
+.vertical-align {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.inside {
+    margin: auto;
+
+    ion-buttons {
+        display: inline !important;
+    }
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--ion-color-title);
+}
+
+p {
+    font-size: 11pt;
+    color: var(--ion-color-text);
+    margin: 1rem 0;
+}
+img {
+    width: 5rem;
+    padding-bottom: 1rem;
+}
+
+ion-button {
+    font-weight: 700;
+    font-size: 11pt;
+    
+    text-transform: none;
+    margin-top: 1rem;
+    --padding-top: 1rem;
+    --padding-bottom: 1rem;
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+}
+
+@media (min-device-height: 568px) and (max-device-height: 640px),
+handheld and (orientation: portrait) {
+    p {
+        margin: .5rem 0 !important;
+    }
+
+    .inside {
+        margin: none !important;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="ionic4-star-rating">
+    <button [ngStyle]="{'width' : fontSize, 'height' : fontSize}" 
+            *ngFor="let index of iconsArray" 
+            id="{{index}}"
+            type="button" 
+            ion-button 
+            icon-only 
+            (click)="changeRating($event)">
+        <ion-icon
+            [ngStyle]="{'color':index < this.Math.round(this.parseFloat(rating)) ? activeColor : defaultColor, 'font-size' : fontSize }"
+            name="{{(halfStar ==='true' && (rating - index > 0) && (rating - index <= 0.5)) ? 'star-half-outline' : (index < this.Math.round(this.parseFloat(rating))) ? 'star' : 'star-outline'}}">
+        </ion-icon>
+    </button>
+
+</div>

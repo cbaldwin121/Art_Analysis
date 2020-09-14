@@ -1,27 +1,63 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+h5 {
+  font-weight: 700;
+  padding-bottom: .5rem;
+  color: var(--ion-color-title);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: #fff;
+  --padding-top: 1rem;
+  --padding-bottom: 1rem;
+  --border-style: none !important;
+  --border-color: none !important;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-content {
+  --background: var(--ion-color-primary);
 }
 
-#container a {
-  text-decoration: none;
+.content {
+  border-radius: 14pt 14pt 0 0;
+  background: #ffffff;
+  padding: 1rem;
+  min-height: 100%;
 }
+
+
+ion-title {
+  p {
+    margin: 0 !important;
+  }
+
+  span {
+    font-weight: 400 !important;
+    font-size: 10pt;
+  }
+}
+
+.circle-button i {
+  color: #fff;
+}
+
+
+img {
+  fill: white;
+}
+
+@media (max-device-height: 568px), handheld and (orientation: portrait) {
+  
+  h5 {
+    font-size: 11pt;
+    margin: 0;
+  }
+}
+
+@media (max-device-height: 640px), handheld and (orientation: portrait) {
+  
+  h5 {
+    font-size: 12pt;
+    margin: .5rem;
+  }
+}
+

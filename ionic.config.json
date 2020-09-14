@@ -1,5 +1,7 @@
 {
-  "name": "cognito-test",
-  "integrations": {},
+  "name": "ionic-doctor",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

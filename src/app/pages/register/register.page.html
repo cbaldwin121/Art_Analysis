@@ -1,26 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
-
 <ion-content>
+  <div class="flex flex-column main-container">
+    <div class="welcome">
+      <img class="icon" src="assets/icon/first-aid-kit-color.svg" />
+      <h5>Hello, Sign up</h5>
+      <p>to your new account</p>
+    </div>
 
-<div [formGroup]='signupForm'>
-  <ion-label>First Name:</ion-label>
-    <ion-input type="text" formControlName="name" required></ion-input>
-  <ion-label>Last Name</ion-label>
-    <ion-input type="text" formControlName="lastname" required></ion-input>
-  <ion-label>Email</ion-label>
-    <ion-input type="text" formControlName="email" required></ion-input>
-  <ion-label>Password</ion-label>
-    <ion-input type="password" formControlName="password" required></ion-input>
+    <div class="ion-text-center">
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Full name</ion-label>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
 
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Email address</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
 
-</div>
-
-<ion-button (click)="signUp()" [disabled]="shouldEnableSubmit()">Sign Up</ion-button>
+      <ion-button class="apply-button" expand="block" (click)="register()">
+        Sign Up
+      </ion-button>
+    </div>
+    <div class="text ion-text-center">
+      <span>Have an account? <a [routerLink]="['/login']">Sign in</a></span>
+    </div>
+  </div>
 </ion-content>
-

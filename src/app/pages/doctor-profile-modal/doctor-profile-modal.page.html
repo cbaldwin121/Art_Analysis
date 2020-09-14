@@ -1,0 +1,42 @@
+<ion-content>
+	<ion-item>
+		<ion-avatar>
+			<img src="{{ doctor?.photo }}" />
+		</ion-avatar>
+		<ion-label>
+			<h2>{{ doctor?.name }}</h2>
+			<p>{{ doctor?.speciality }}</p>
+		</ion-label>
+	</ion-item>
+	<div class="flex flex-start flex-row flex-align-vertical rate-container">
+		<h1>{{ doctor?.stars }}</h1>
+
+		<app-star-rating
+			style="margin-right: .6rem; margin-left: .6rem"
+			#rating
+			activeIcon="ios-star"
+			defaultIcon="ios-star-outline"
+			activeColor="#ffce00"
+			defaultColor="#a6b0bf"
+			readonly="true"
+			rating="{{ doctor?.stars }}"
+			fontSize="18pt"
+		>
+		</app-star-rating>
+		
+		
+		<span slot="end" class="review-count"
+			>({{ doctor?.reviews }}) Reviews</span
+		>
+	</div>
+    <ion-text color="dark">
+        <h5>Lastest reviews</h5>
+	</ion-text>
+	<app-review-item
+		*ngFor="let item of reviews"
+		[name]="item?.name"
+		[avatar]="item?.avatar"
+		[rate]="item?.rate"
+		[text]="item?.text"
+	></app-review-item>
+</ion-content>

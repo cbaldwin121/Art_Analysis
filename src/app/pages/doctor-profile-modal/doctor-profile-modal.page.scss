@@ -1,0 +1,68 @@
+ion-content {
+    --padding-start: 1rem;
+    --padding-top: 1rem;
+    --padding-end: 1rem;
+    --padding-bottom: 1rem;
+}
+
+ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    --border-color: #fff;
+
+    ion-avatar {
+        --border-radius: 10pt;
+        margin: 0 1rem 0 0;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 14pt;
+        color: var(--ion-color-title);
+    }
+
+    h1 {
+        font-size: 24pt;
+        color: var(--ion-color-subtitle);
+    }
+
+    p {
+        font-size: 10pt;
+        text-transform: uppercase;
+        color: var(--ion-color-text);
+    }
+}
+
+.review-count {
+    color: var(--ion-color-subtitle);
+    font-size: 11pt;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0 !important;
+    color: var(--ion-color-title);
+}
+
+section {
+    margin: .5rem auto !important;
+}
+.apply-button span {
+    color: #fff !important;
+}
+
+ion-text {
+    h5 {
+        margin: 1rem auto !important;
+        font-weight: 700;
+        font-size: 12pt;
+        color: var(--ion-color-title);
+    }
+}
+
+.rate-container {
+    margin: .5rem;
+}

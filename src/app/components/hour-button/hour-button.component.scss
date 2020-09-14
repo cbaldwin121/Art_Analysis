@@ -1,0 +1,18 @@
+.loc-button {
+    font-weight: 700;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    --border-radius: 12pt;
+  }
+
+  .hour-button {
+    width: auto !important;
+    height: 2.5rem !important;
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+  }
+  
+  ion-button.active {
+      --background: var(--ion-color-primary) !important;
+      --color: #fff;
+  }

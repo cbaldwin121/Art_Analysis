@@ -1,0 +1,167 @@
+ion-content {
+  --background: #ffffff;
+  --padding-start: 2rem;
+  --padding-end: 2rem;
+  --padding-top: 2rem;
+  --padding-bottom: 2rem;
+}
+
+ion-button {
+  margin-top: 3rem;
+}
+
+.welcome {
+  color: var(--ion-color-primary);
+  line-height: 4pt;
+
+  h5 {
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 12pt;
+    color: #8b939e;
+  }
+}
+
+.main-container {
+  justify-content: center;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ion-title {
+  font-weight: 600;
+  text-align: end;
+  margin: 2em 0.5em 0 0;
+}
+
+ion-item {
+  margin-bottom: 1em;
+
+  ion-label {
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--ion-color-title);
+  }
+}
+
+ion-item {
+  --inner-padding-end: 0;
+
+  ion-label {
+    margin-bottom: 1rem;
+  }
+
+  ion-input {
+    box-shadow: none !important;
+    border-radius: 6pt !important;
+    --padding-top: 0.7rem;
+    --padding-bottom: 0.7rem;
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+    --icon-color: #508eff;
+    --placeholder-color: rgba(0, 0, 0, 0.6);
+    --background: #e5edfa;
+  }
+}
+
+.input-help {
+  font-size: 10pt;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: right;
+  color: var(--ion-color-text);
+}
+
+.text {
+  font-size: 11pt;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--ion-color-text);
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    padding-left: 0.2rem;
+  }
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.item-interactive.ion-valid {
+  --highlight-background: var(--ion-color-primary);
+}
+
+@media (max-device-height: 568px),
+handheld and (orientation: portrait) {
+  .img-container {
+    margin-bottom: 2rem;
+  }
+
+  ion-item {
+    margin-bottom: 0.5rem;
+
+    ion-label {
+      font-size: 10pt;
+    }
+  }
+  ion-button {
+    margin-top: 2rem !important;
+  }
+
+  input {
+    font-size: 11pt !important;
+  }
+
+  .input-help {
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    font-size: 10pt;
+    margin-bottom: 0.5rem;
+  }
+
+  ion-item {
+    --inner-padding-end: 0;
+
+    ion-label {
+      margin-bottom: 1rem;
+      font-size: 10pt;
+    }
+
+    ion-input {
+      --padding-top: 0.5rem;
+      --padding-bottom: 0.5rem;
+      --padding-start: 1rem;
+      --padding-end: 1rem;
+    }
+  }
+
+  .welcome {
+    line-height: 2pt;
+
+    img {
+      width: 3rem;
+    }
+
+    h5 {
+      font-size: 11pt;
+      margin-top: .5rem;
+    }
+
+    p {
+      font-size: 9pt;
+    }
+  }
+}

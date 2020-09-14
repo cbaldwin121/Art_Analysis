@@ -12,8 +12,8 @@ export class OnboardingPage implements OnInit {
     {
       id: 1,
       image: 'assets/icon/first-aid-kit-color.svg',
-      title: 'Stay connected!',
-      description: 'Connect your therapist, caretaker and doctor to one platform'
+      title: 'Choose the best',
+      description: 'Choose top doctors and get quality treatments'
     },
     {
       id: 2,
@@ -47,14 +47,14 @@ export class OnboardingPage implements OnInit {
     this.slides.length().then(value => this.slidesTotal = value);
   }
 
-  changeText(event) {
+  changeText($event) {
     this.btnText = `Let's go`;
   }
 
-  nextSlide(event) {
+  nextSlide($event) {
     this.slides.getActiveIndex().then(idx => {
       if (this.slidesTotal === idx + 1) {
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/tabs/home');
       } else {
         this.slides.slideNext();
       }

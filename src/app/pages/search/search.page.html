@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Searching
+    </ion-title>
+    <ion-button (click)="openFilter()" class="circle-button ion-no-padding" slot="end" color="default" shape="round">
+      <i class="icon-sliders"></i>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+    <ion-searchbar animated></ion-searchbar>
+    <ion-text>
+      <h5>Recent searches</h5>
+    </ion-text>
+
+    <app-recent-search-item *ngFor="let item of data" [name]="item.name" [photo]="item.photo"
+      [speciality]="item.speciality"></app-recent-search-item>
+  </div>
+</ion-content>

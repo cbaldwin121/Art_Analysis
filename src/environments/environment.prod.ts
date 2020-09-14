@@ -1,3 +1,4 @@
+const newLocal = "project.firebaseapp.com";
 export const environment = {
   production: true,
   confirm: {
@@ -5,3 +6,4 @@ export const environment = {
     password: ''
  }
 };
+
