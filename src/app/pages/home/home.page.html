@@ -1,20 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+	<ion-toolbar [appHidePartHeader]="scrollArea">
+		<ion-title>
+			<span>Find your</span>
+			<p>Specialist</p>
+		</ion-title>
+		<ion-button
+			class="circle-button ion-no-padding"
+			slot="end"
+			color="default"
+			shape="round"
+			(click)="goToNotifications()"
+		>
+			<i class="icon-bell"></i>
+		</ion-button>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content #scrollArea scrollEvents="true">
+	<div class="content">
+		<ion-searchbar slot="start" animated></ion-searchbar>	
+		<ion-text>
+			<h5>Categories</h5>
+		</ion-text>
+		<ion-slides [options]="catConfig">
+			<ion-slide *ngFor="let item of categories; let i = index">
+				<app-category-card
+					[color]="item.color"
+					[photo]="item.photo"
+					[routerLink]="'/category-detail'"
+				>
+				</app-category-card>
+			</ion-slide>
+		</ion-slides>
+		<ion-text>
+			<h5>Top rated</h5>
+		</ion-text>
+		<ion-slides [options]="cardConfig">
+			<ion-slide
+				*ngFor="let item of data; let i = index"
+			>
+				<app-doctor-small-card
+					[name]="item.name"
+					[photo]="item.photo"
+				>
+				</app-doctor-small-card>
+			</ion-slide>
+		</ion-slides>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+		<ion-text>
+			<h5>New added</h5>
+		</ion-text>
+		<app-doctor-item
+			*ngFor="let item of data"
+			[name]="item.name"
+			[photo]="item.photo"
+			[speciality]="item.speciality"
+			[stars]="item.stars"
+			[reviews]="item.reviews"
+			[routerLink]="'/doctor'"
+		></app-doctor-item>
+	</div>
 </ion-content>

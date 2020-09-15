@@ -46,7 +46,7 @@ export class AuthService {
      });
    }
 
-   signIn(username: string, password, string):Promise<CognitoUser|any> {
+   signIn(username: string, password: string):Promise<CognitoUser|any> {
      return new Promise((resolve, reject) => {
        Auth.signIn(username, password).then((user: CognitoUser|any)=> {
          this.loggedIn = true;

@@ -1,0 +1,51 @@
+<div class="container">
+	<ion-item>
+		<ion-avatar>
+			<img src="{{ photo }}" />
+		</ion-avatar>
+		<ion-label>
+			<h2>{{ name }}</h2>
+			<div [ngSwitch]="status">					
+				<span *ngSwitchCase="'Approved'" class="approved">{{ status }}</span>
+				<span *ngSwitchCase="'Pending'" class="pending">{{ status }}</span>
+			</div>
+			<p>{{ date }}</p>	
+		</ion-label>
+		<ion-button slot="end" fill="clear" size="small" shape="round" color="medium" (click)="isOpen = !isOpen">
+			<ng-container *ngIf="!isOpen; else elseTemplate">
+			  <ion-icon  slot="icon-only" name="chevron-down-outline"></ion-icon>
+			</ng-container>
+			<ng-template #elseTemplate>
+			  <ion-icon  slot="icon-only" name="chevron-up-outline"></ion-icon>
+			</ng-template>
+		  </ion-button>
+	</ion-item>
+	<ion-grid *ngIf="isOpen">
+		<ion-row>
+			<ion-col>
+				<ul>
+					<li>Date</li>
+					<li>{{ date }}</li>
+				</ul>
+			</ion-col>
+			<ion-col>
+				<ul>
+					<li>Place</li>
+					<li>{{ place }}</li>
+				</ul>
+			</ion-col>
+		</ion-row>	
+		<ion-row>
+			<ion-col>
+				<ion-buttons class="flex flex-row justify-center">
+					<ion-button color="primary" class="resc-btn">
+					  <span>Reschedule</span>
+					</ion-button>
+					<ion-button color="danger" class="cancel-btn">
+					  <span>Cancel</span>
+					</ion-button>
+				  </ion-buttons>
+			</ion-col>
+		</ion-row>	
+	</ion-grid>
+</div>

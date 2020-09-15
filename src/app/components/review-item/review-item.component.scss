@@ -1,0 +1,35 @@
+ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    --border-color: #fff;
+
+    ion-avatar {
+        --border-radius: 8pt;
+        margin: 0 1rem 0 0;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 11pt;
+        color: var(--ion-color-title);
+    }
+
+
+}
+
+ion-card {
+    box-shadow: none !important;
+}
+
+
+ion-card-header, ion-card-content {
+    padding: 0 !important;
+}
+
+ion-card-content {
+	font-size: 11pt;
+	color: var(--ion-color-text);
+}
