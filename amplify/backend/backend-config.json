@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"cognitotestf8f325a1": {
+		"17mindscogntio": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []

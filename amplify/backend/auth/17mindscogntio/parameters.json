@@ -1,12 +1,10 @@
 {
-    "identityPoolName": "cognitotestf8f325a1_identitypool_f8f325a1",
-    "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "cognitf8f325a1",
-    "userPoolName": "cognitotestf8f325a1_userpool_f8f325a1",
+    "resourceNameTruncated": "17mind2e54a253",
+    "userPoolName": "17mindscognitousers",
     "autoVerifiedAttributes": [
         "email"
     ],
-    "mfaConfiguration": "OFF",
+    "mfaConfiguration": "OPTIONAL",
     "mfaTypes": [
         "SMS Text Message"
     ],
@@ -14,11 +12,17 @@
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Your verification code",
     "emailVerificationMessage": "Your verification code is {####}",
-    "defaultPasswordPolicy": false,
+    "defaultPasswordPolicy": true,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
     "requiredAttributes": [
-        "email"
+        "email",
+        "name"
     ],
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
@@ -28,11 +32,19 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "cognitf8f325a1_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "17mind2e54a253_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "f8f325a1",
-    "resourceName": "cognitotestf8f325a1",
-    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "manual",
+    "authSelections": "userPoolOnly",
+    "resourceName": "17mindscogntio",
+    "usernameAttributes": [
+        "email"
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": "{}",
+    "hostedUI": false,
+    "userPoolGroupList": [],
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -45,12 +57,6 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
-    "usernameAttributes": [
-        "email"
-    ],
-    "triggers": "{}",
-    "userPoolGroupList": [],
     "parentStack": {
         "Ref": "AWS::StackId"
     },

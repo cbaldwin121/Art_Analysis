@@ -1,20 +1,38 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-cognitotest-dev-142808-authRole",
-            "UnauthRoleArn": "arn:aws:iam::435430034477:role/amplify-cognitotest-dev-142808-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::435430034477:role/amplify-cognitotest-dev-142808-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-cognitotest-dev-142808-deployment",
-            "UnauthRoleName": "amplify-cognitotest-dev-142808-unauthRole",
-            "StackName": "amplify-cognitotest-dev-142808",
-            "StackId": "arn:aws:cloudformation:us-east-1:435430034477:stack/amplify-cognitotest-dev-142808/93482ee0-dcc9-11ea-82de-0af228e676ce",
-            "AmplifyAppId": "d1ned713m4ijry"
-        },
-        "categories": {
-            "auth": {
-                "cognitotestf8f325a1": {}
-            }
-        }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cognitotest-dev-142808-authRole",
+      "UnauthRoleArn": "arn:aws:iam::435430034477:role/amplify-cognitotest-dev-142808-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::435430034477:role/amplify-cognitotest-dev-142808-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cognitotest-dev-142808-deployment",
+      "UnauthRoleName": "amplify-cognitotest-dev-142808-unauthRole",
+      "StackName": "amplify-cognitotest-dev-142808",
+      "StackId": "arn:aws:cloudformation:us-east-1:435430034477:stack/amplify-cognitotest-dev-142808/93482ee0-dcc9-11ea-82de-0af228e676ce",
+      "AmplifyAppId": "d1ned713m4ijry"
+    },
+    "categories": {
+      "auth": {
+        "17mindscogntio": {}
+      }
     }
+  },
+  "stminds": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cognitotest-stminds-213836-authRole",
+      "UnauthRoleArn": "arn:aws:iam::303356187797:role/amplify-cognitotest-stminds-213836-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::303356187797:role/amplify-cognitotest-stminds-213836-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cognitotest-stminds-213836-deployment",
+      "UnauthRoleName": "amplify-cognitotest-stminds-213836-unauthRole",
+      "StackName": "amplify-cognitotest-stminds-213836",
+      "StackId": "arn:aws:cloudformation:us-east-1:303356187797:stack/amplify-cognitotest-stminds-213836/82e4f2d0-f886-11ea-a5b1-1263ebc1f863",
+      "AmplifyAppId": "d3teqe6xz3xcmy"
+    },
+    "categories": {
+      "auth": {
+        "17mindscogntio": {}
+      }
+    }
+  }
 }
