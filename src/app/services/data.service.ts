@@ -8,70 +8,70 @@ export class DataService {
   categories = [
     {
       id: 1,
-      name: 'Dermatology',
+      name: 'Occupational Therapist',
       photo: 'assets/icon/001-medicine.svg',
       count: 123,
       color: 'red'
     },
     {
       id: 2,
-      name: 'Medical',
+      name: 'Developmental Psychologist',
       photo: 'assets/icon/002-syringe.svg',
       count: 123,
       color: 'yellow'
     },
     {
       id: 3,
-      name: 'Dermatology',
+      name: 'Speech Therapist',
       photo: 'assets/icon/003-first-aid-kit.svg',
       count: 123,
       color: 'blue'
     },
     {
       id: 4,
-      name: 'Dermatology',
+      name: 'Applied Behavior Analyst',
       photo: 'assets/icon/004-tooth.svg',
       count: 123,
       color: 'green'
     },
     {
       id: 5,
-      name: 'Dermatology',
+      name: 'School Counselor',
       photo: 'assets/icon/005-siren.svg',
       count: 123,
       color: 'yellow'
     },
     {
       id: 6,
-      name: 'Dermatology',
+      name: 'Applied Behavior Analyst',
       photo: 'assets/icon/006-medical-history.svg',
       count: 123,
       color: 'magenta'
     },
     {
       id: 7,
-      name: 'Dermatology',
+      name: 'Speech-Language Pathologist',
       photo: 'assets/icon/007-plaster.svg',
       count: 123,
       color: 'red'
     },
     {
       id: 8,
-      name: 'Dermatology',
+      name: 'Sign Language Interpreter',
       photo: 'assets/icon/008-test-tubes.svg',
       count: 123,
       color: 'blue'
     },
     {
       id: 9,
-      name: 'Dermatology',
+      name: 'Teacher',
       photo: 'assets/icon/009-virus.svg',
       count: 123,
       color: 'navy'
     },
     {
       id: 10,
-      name: 'Dermatology',
+      name: 'Special Education Teacher',
       photo: 'assets/icon/010-microscope.svg',
       count: 123,
       color: 'green'
@@ -82,7 +82,7 @@ export class DataService {
     {
       id: 1,
       name: 'PhD Lara Jones',
-      speciality: 'Dermatology',
+      speciality: 'Occupational Therapist',
       photo:
         // tslint:disable-next-line: max-line-length
         'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=124&q=80',
@@ -96,38 +96,31 @@ export class DataService {
       services: [
         {
           id: 1,
-          service: 'Dental Consultant',
+          service: 'Goals for Timmy',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This would describe intial set of goals made with PhD Lara Jones in initial meeting',
           price: 20
         },
         {
           id: 2,
-          service: 'Hair Loss Treatment',
+          service: 'Notes and Comments',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'General Notes',
           price: 25
         },
         {
           id: 3,
-          service: 'Acne/Pimples Treatment',
+          service: 'Official Documentation',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This is official Documentation important that both part has access for records',
           price: 90
-        },
-        {
-          id: 4,
-          service: 'Wart removal',
-          description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-          price: 80
         }
       ]
     },
     {
       id: 2,
       name: 'PhD Jonathan McDonald',
-      speciality: 'Medical genetics',
+      speciality: 'Developmental Psychologist',
       photo:
         'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=124&q=80',
       reviews: 12,
@@ -140,38 +133,31 @@ export class DataService {
       services: [
         {
           id: 1,
-          service: 'Dental Consultant',
+          service: 'Goals for Timmy',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This would describe intial set of goals made with PhD Lara Jones in initial meeting',
           price: 20
         },
         {
           id: 2,
-          service: 'Hair Loss Treatment',
+          service: 'Notes and Comments',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'General Notes',
           price: 25
         },
         {
           id: 3,
-          service: 'Acne/Pimples Treatment',
+          service: 'Official Documentation',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This is official Documentation important that both part has access for records',
           price: 90
-        },
-        {
-          id: 4,
-          service: 'Wart removal',
-          description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-          price: 80
         }
       ]
     },
     {
       id: 3,
       name: 'PhD Sandra Smith',
-      speciality: 'Family medicine',
+      speciality: 'Speech Therapist',
       photo:
         'https://images.unsplash.com/photo-1568967729548-e3dbad3d37e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=124&q=80',
       reviews: 120,
@@ -184,38 +170,31 @@ export class DataService {
       services: [
         {
           id: 1,
-          service: 'Dental Consultant',
+          service: 'Goals for Timmy',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This would describe intial set of goals made with PhD Lara Jones in initial meeting',
           price: 20
         },
         {
           id: 2,
-          service: 'Hair Loss Treatment',
+          service: 'Notes and Comments',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'General Notes',
           price: 25
         },
         {
           id: 3,
-          service: 'Acne/Pimples Treatment',
+          service: 'Official Documentation',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This is official Documentation important that both part has access for records',
           price: 90
-        },
-        {
-          id: 4,
-          service: 'Wart removal',
-          description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-          price: 80
         }
       ]
     },
     {
       id: 4,
       name: 'MsC John Carter',
-      speciality: 'Internal medicine',
+      speciality: 'Applied Behavior Analyst',
       photo:
         'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=124&q=80',
       reviews: 582,
@@ -228,31 +207,24 @@ export class DataService {
       services: [
         {
           id: 1,
-          service: 'Dental Consultant',
+          service: 'Goals for Timmy',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This would describe intial set of goals made with PhD Lara Jones in initial meeting',
           price: 20
         },
         {
           id: 2,
-          service: 'Hair Loss Treatment',
+          service: 'Notes and Comments',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'General Notes',
           price: 25
         },
         {
           id: 3,
-          service: 'Acne/Pimples Treatment',
+          service: 'Official Documentation',
           description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            'This is official Documentation important that both part has access for records',
           price: 90
-        },
-        {
-          id: 4,
-          service: 'Wart removal',
-          description:
-            'Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
-          price: 80
         }
       ]
     }

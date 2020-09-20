@@ -1,0 +1,101 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Filters</ion-title>
+    <ion-button
+      (click)="closeFilter()"
+      class="dark circle-button ion-no-padding"
+      slot="end"
+      color="default"
+      shape="round"
+    >
+      <i class="icon-x"></i>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-text>
+    <h5>Speciality</h5>
+  </ion-text>
+  <ion-input placeholder="Write a speciality"></ion-input>
+  <ion-text>
+    <h5>Price range</h5>
+  </ion-text>
+  <ion-range min="0" max="1000" color="primary" dualKnobs="true" pin="true">
+    <ion-label slot="start">0</ion-label>
+    <ion-label slot="end">1000</ion-label>
+  </ion-range>
+
+  <ion-text>
+    <h5>Availability</h5>
+  </ion-text>
+
+  <ion-buttons class="flex flex-row justify-center ion-padding">
+    <ion-button size="small" class="days-button" shape="round" fill="clear">
+      M
+    </ion-button>
+    <ion-button size="small" class="days-button" fill="clear" shape="round">
+      T
+    </ion-button>
+    <ion-button size="small" class="days-button" fill="clear" shape="round">
+      W
+    </ion-button>
+    <ion-button size="small" class="days-button" fill="clear" shape="round">
+      T
+    </ion-button>
+    <ion-button size="small" class="days-button" fill="clear" shape="round">
+      F
+    </ion-button>
+    <ion-button size="small" class="days-button" fill="clear" shape="round">
+      S
+    </ion-button>
+    <ion-button size="small" class="days-button" fill="clear" shape="round">
+      S
+    </ion-button>
+  </ion-buttons>
+
+  <ion-text>
+    <h5>Location</h5>
+  </ion-text>
+  <ion-buttons class="flex flex-row justify-center">
+    <ion-button
+      color="primary"
+      size="small"
+      class="loc-button"
+      fill="clear"
+      shape="round"
+    >
+      0-100m
+    </ion-button>
+    <ion-button
+      size="small"
+      color="primary"
+      class="loc-button"
+      fill="clear"
+      shape="round"
+    >
+      100-500m
+    </ion-button>
+    <ion-button
+      size="small"
+      color="primary"
+      class="loc-button"
+      fill="clear"
+      shape="round"
+    >
+      +1km
+    </ion-button>
+    <ion-button
+      size="small"
+      color="primary"
+      class="loc-button"
+      fill="clear"
+      shape="round"
+    >
+      +5km
+    </ion-button>
+  </ion-buttons>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-no-padding">
+  </ion-toolbar>
+</ion-footer>

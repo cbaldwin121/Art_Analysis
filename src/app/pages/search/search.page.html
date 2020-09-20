@@ -1,23 +1,41 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+
     <ion-title>
-      Searching
+      Connection Page
     </ion-title>
-    <ion-button (click)="openFilter()" class="circle-button ion-no-padding" slot="end" color="default" shape="round">
-      <i class="icon-sliders"></i>
+    
+    <ion-button (click)="openAddProfile()" class="circle-button ion-no-padding" slot="end" color="defualt" shape="round">
+      <ion-icon name="person-add-outline"> </ion-icon>
     </ion-button>
+    <ion-button (click)="Profile()" class="circle-button ion-no-padding" slot="end" color="defualt" shape="round">
+      <ion-avatar>
+        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80" />
+      </ion-avatar>
+    </ion-button>
+  
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
   <div class="content">
     <ion-searchbar animated></ion-searchbar>
+    
     <ion-text>
-      <h5>Recent searches</h5>
+      <h5>List of Medical Connections</h5>
     </ion-text>
 
-    <app-recent-search-item *ngFor="let item of data" [name]="item.name" [photo]="item.photo"
-      [speciality]="item.speciality"></app-recent-search-item>
+
+    
+    <app-doctor-item
+			*ngFor="let item of data"
+			[name]="item.name"
+			[photo]="item.photo"
+			[speciality]="item.speciality"
+			[stars]="item.stars"
+			[reviews]="item.reviews"
+			[routerLink]="'/doctor'"
+		></app-doctor-item>
   </div>
 </ion-content>

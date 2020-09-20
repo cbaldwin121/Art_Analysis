@@ -1,3 +1,4 @@
+
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -5,20 +6,19 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SearchPage } from './search.page';
 import { ComponentsModule } from 'app/components/components.module';
-import { FilterModalPage } from '../filter-modal/filter-modal.page';
-import { FilterModalPageModule } from '../filter-modal/filter-modal.module';
+import { AddProfilePageModule } from '../add-profile/add-profile.module';
 
 @NgModule({
   entryComponents: [
-    FilterModalPage
+    AddProfilePageModule
   ],
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ComponentsModule,
-    FilterModalPageModule,
-    RouterModule.forChild([{ path: '', component: SearchPage }])
+    AddProfilePageModule,
+    RouterModule.forChild([{path: '', component: SearchPage}])
   ],
   declarations: [SearchPage]
 })
