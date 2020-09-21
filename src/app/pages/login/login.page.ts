@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { CognitoUser } from '@aws-amplify/auth';
+
 
 @Component({
   selector: 'app-login',
@@ -10,7 +13,8 @@ export class LoginPage implements OnInit {
   email: string;
   password: string;
 
-  constructor(private router: Router) {}
+  constructor(private _router: Router,
+              public auth: AuthService) {}
 
   ngOnInit() {
     this.email = '';
@@ -18,10 +22,32 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.router.navigateByUrl('/tabs/home');
-  }
+    console.log(this.email)
+    console.log(this.password)
 
+    this.auth.signIn(this.email, this.password)
+    .then((user: CognitoUser|any) => {
+        this._router.navigate(['home']);
+    })
+    .catch((error: any) => {
+
+      // console.log(error.message); // Add notification functionality here 
+      // this.openSnackBar(error);
+      switch (error.code) {
+        // case "UserNotConfirmedException":
+        //   environment.confirm.email = this.emailInput.value;
+        //   environment.confirm.password = this.passwordInput.value;
+        //   this._router.navigate(['confirm']);
+        //   break;
+        case "UsernameExistsException":
+          this._router.navigate(['signin']);
+          break;
+
+      }
+    })
+  }
 }
+
 // import { Component } from '@angular/core';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 // import { AuthService } from 'src/app/services/auth.service';

@@ -6,19 +6,19 @@
       <p>to your new account</p>
     </div>
 
-    <div class="ion-text-center">
+    <div [formGroup]='signupForm' class="ion-text-center">
       <ion-item class="ion-no-padding" lines="none">
         <ion-label position="stacked">Full name</ion-label>
-        <ion-input [(ngModel)]="name" type="text"></ion-input>
+        <ion-input type="text" formControlName="name" required></ion-input>
       </ion-item>
 
       <ion-item class="ion-no-padding" lines="none">
         <ion-label position="stacked">Email address</ion-label>
-        <ion-input [(ngModel)]="email" type="email"></ion-input>
+        <ion-input type="email" formControlName="email" required></ion-input>
       </ion-item>
       <ion-item class="ion-no-padding" lines="none">
         <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
+        <ion-input type="password" formControlName="password" required></ion-input>
       </ion-item>
 
       <ion-button class="apply-button" expand="block" (click)="register()">

@@ -1,27 +1,75 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
 })
-export class RegisterPage implements OnInit {
+export class RegisterPage{
 
-  name: string;
-  phone: string;
-  email: string;
-  password: string;
+  hide = true;
+  signupForm: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.compose([
+      Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+    ]))
+  });
 
-  constructor(private router: Router) {}
+  get emailInput() {
+    return this.signupForm.get('email')
+  }
+  get passwordInput() {
+    return this.signupForm.get('password')
+  }
+  get nameInput() {
+    return this.signupForm.get('name')
+  }
 
-  ngOnInit() {
-    this.email = '';
-    this.password = '';
+
+  constructor(private _router: Router,
+              private _authService: AuthService
+              ) {}
+
+ 
+  //TODO instead of returning these error messages, they should appear somewhere on the frontend 
+  getEmailInputError(){
+    if (this.emailInput.hasError("email")){
+      return "Please enter a valid email address"
+    }
+    if (this.emailInput.hasError("required")){
+      return "An email is required"
+    }
+  }
+  getPasswordInputError(){
+    if (this.passwordInput.hasError("required")){
+      return "A password is required"
+    }
+  }
+
+  shouldEnableSubmit(){
+    return (
+      !this.emailInput.valid ||
+      !this.passwordInput.valid ||
+      !this.nameInput.valid 
+    )
   }
 
   register() {
-    this.router.navigateByUrl('/tabs/home');
+    this._authService.signUp({
+      email: this.emailInput.value,
+      password: this.passwordInput.value,
+      name: this.nameInput.value
+    }).then(data => {
+      environment.confirm.email = this.emailInput.value;
+      environment.confirm.password = this.passwordInput.value;
+      this._router.navigate(["confirm-email"]);
+    }).catch(error => console.log(error))
+    console.log(environment.confirm.email)
   }
 
 }

@@ -2,21 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { IonicModule } from '@ionic/angular';
 
-import { RegisterPageRoutingModule } from './register-routing.module';
+import { ConfirmEmailPageRoutingModule } from './confirm-email-routing.module';
 
-import { RegisterPage } from './register.page';
+import { ConfirmEmailPage } from './confirm-email.page';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
     IonicModule,
-    RegisterPageRoutingModule
+    ReactiveFormsModule,
+    ConfirmEmailPageRoutingModule
   ],
-  declarations: [RegisterPage]
+  declarations: [ConfirmEmailPage]
 })
-export class RegisterPageModule {}
+export class ConfirmEmailPageModule {}
