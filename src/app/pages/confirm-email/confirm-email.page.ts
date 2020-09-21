@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment }  from 'src/environments/environment'
+import { environment }  from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { Auth } from 'aws-amplify';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -13,7 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ConfirmEmailPage implements OnInit {
 
   email = environment.confirm.email;
-  
+
   confirmForm: FormGroup = new FormGroup({
     email: new FormControl({value: this.email, disabled: true}), 
     code: new FormControl('', [Validators.required, Validators.min(3)])
