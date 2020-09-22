@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-logout-modal',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutModalPage implements OnInit {
 
-  constructor() { }
+  constructor(private _authService: AuthService,
+              private _router: Router) { }
 
   ngOnInit() {
+  }
+
+  signOut(){
+    this._authService.signOut()
+    .then(() => this._router.navigate['login'])
   }
 
 }
