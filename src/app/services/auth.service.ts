@@ -11,7 +11,6 @@ export interface NewUser {
   email: string,
   password: string,
   name: string, 
-  lastName: string
 };
 
 @Injectable({
@@ -41,7 +40,8 @@ export class AuthService {
        "username":user.email,
        "password": user.password,
        "attributes":{
-         "email":user.email
+         "email":user.email,
+         "name": user.name,
        }
      });
    }
