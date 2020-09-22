@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"17mindscogntio": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}

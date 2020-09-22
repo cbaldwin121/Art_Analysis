@@ -1,0 +1,36 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cognitotest-stminds-213836-authRole",
+      "UnauthRoleArn": "arn:aws:iam::303356187797:role/amplify-cognitotest-stminds-213836-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::303356187797:role/amplify-cognitotest-stminds-213836-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cognitotest-stminds-213836-deployment",
+      "UnauthRoleName": "amplify-cognitotest-stminds-213836-unauthRole",
+      "StackName": "amplify-cognitotest-stminds-213836",
+      "StackId": "arn:aws:cloudformation:us-east-1:303356187797:stack/amplify-cognitotest-stminds-213836/82e4f2d0-f886-11ea-a5b1-1263ebc1f863",
+      "AmplifyAppId": "d3teqe6xz3xcmy"
+    }
+  },
+  "auth": {
+    "17mindscogntio": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cognitotest-stminds-213836-deployment/amplify-cfn-templates/auth/17mindscogntio-cloudformation-template.yml",
+        "logicalId": "auth17mindscogntio"
+      },
+      "lastPushTimeStamp": "2020-09-18T17:54:01.359Z",
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::303356187797:role/snsundefined213836-stminds",
+        "AppClientSecret": "10t7uorv3gs5upp3j3kmjmec9n7tg0tlafbl4ur7ubik3g1iceaj",
+        "UserPoolId": "us-east-1_CX2KlKFnR",
+        "AppClientIDWeb": "2fo3niq75q7supd52fqpir88lj",
+        "AppClientID": "5aaisrmujd94g45mu7mu1p36tv",
+        "UserPoolName": "17mindscognitousers"
+      },
+      "lastPushDirHash": "d0JXuo0ztG/wtfhctkcgkNXAYuE="
+    }
+  }
+}
