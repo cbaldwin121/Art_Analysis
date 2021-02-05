@@ -1,5 +1,4 @@
-# 17Minds-platform
-17 Minds caregiver collaboration platform
+# Application
 
 # Project Structure
 
